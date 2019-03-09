@@ -1,0 +1,19 @@
+language: python
+services:
+- docker
+python:
+- '2.7'
+install:
+- make deps
+script:
+- make lint
+- make test
+- make docker_build
+- make docker_push
+env:
+  global:
+    secure: sAXg9j4/XaXrRuUYqTaUBnK0MYqTxZT/bCeCTCCtsrn8nUpAd13YXGSWVRSORuG9iTCNOfqHR7LK0WiWF2Ft3AIS5iACsb8usvOZBQ5aWI0P1k4UgWCpXqn/svDDG7u3CnpYHhPwQdmnxShNE1FCP/WuwkvIw6irHDn0isGJvK9jxp1l2u3YlmkX4az3D9zr2n1aJ+iw41LhRGvVqh1ver01rRFzcla7sPGxZmVFETWRIV9eIPqBhX4jIlS9xj92lyspPnqzsgJBpEUpP7DbzD2u/rB0n6sW3DB1NwdTbtSsYWA4oy7WVTXHw7MavIkWwOClb7+iBgT0pV3N6AzGVlx+TbYAdf+ABqog25TrxU+rokAdvOqOW89Xd233thk409kPWitgzpPk+Ah0rYCbJQ8zHSqK3mDZMAYvoxhQ7IoARUwE3q/QJPJhCvfI0+pwPbD4axdxPP7uuM7OfmNbb66bracWQB6qppRwd063RghWDfXMp34vvUq+mu0u38tM5Zz77oSnCNCPXHG/pACTdcOlF5oG50iMPtxVxymtwrINQv1Tfeo48JoWdXR+DQeqSpWqZXXrZA+qQ9SeTswQw0mO5vCVYkOKPKtxwDqS+F6IqCOdbsIsmHecTy4oJWvwIny6Z3jfpSD0tBg46XoKgJ0AZcN5NHui3aevsNJkkY0=
+deploy:
+  provider: heroku
+  app: limitless-coast-54508
+api_key: ${HEROKU_API_KEY}
