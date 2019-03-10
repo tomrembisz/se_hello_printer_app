@@ -1,6 +1,5 @@
 **/*.pyc
 .cache
 .coverage
-.gitignor
 coverage.xml
 test_results.xml

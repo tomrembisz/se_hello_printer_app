@@ -1,7 +1,18 @@
+stages:
+   - test
+   - docker_build
+
 test:
    image: "python:2.7"
    stage: test
    script:
-     -pip install -r requirments.txt
-     -pip install -r test_requirments.txt
-     -PYTHONPATH=. py.test --verbose -s
+     - pip install -r requirments.txt
+     - pip install -r test_requirments.txt
+     - PYTHONPATH=. py.test --verbose -s
+
+docker:
+    image: docker:stable
+    services:
+       - docker:dind
+    script"
+    - docker build -t myapp . 

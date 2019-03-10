@@ -1,21 +1,16 @@
 language: python
 services:
-- docker
+    - docker
 python:
-- '2.7'
+    - "2.7"
 install:
-- make deps
+    - make deps
 script:
-- make lint
-- make test_cov
-- make test_xunit
-- make test
-- make docker_build
-- make docker_push
-env:
-  global:
-    secure:
-  deploy:
+    - make lint
+    - make test
+    - make test_xunit 
+    - make docker_build
+deploy:
   provider: heroku
-  app: enigmatic-wave-49275
-api_key: ${HEROKU_API_KEY}
+  app: ancient-cove-74343
+  api_key: ${HEROKU_API_KEY}

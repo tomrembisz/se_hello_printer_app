@@ -1,17 +1,24 @@
+.. image:: https://travis-ci.org/arleta13/se_hello_printer_app.svg?branch=master
+    :target: https://travis-ci.org/arleta13/se_hello_printer_app
+    
+    
+.. image:: https://www.statuscake.com/
+    :target: https://app.statuscake.com/button/index.php?Track=QKWc0uiiBs&Days=1&Design=1
+
+
+
 Simple Flask App
 ================
-
-.. image:: https://travis-ci.org/tomrembisz/se_hello_printer_app.svg?branch=master
-    :target: https://travis-ci.org/tomrembisz/se_hello_printer_app
 
 Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć
 o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
-- Rozpocząnając pracę z projektem (wykorzystując virtualenv). Hermetyczne środowisko dla pojedyńczej aplikacji w python-ie:
+- Rozpocząnając pracę z projektem (wykorzystując virtualenv).
+  Hermetyczne środowisko dla pojedyńczej aplikacji w python-ie:
 
   ::
-
-    source /usr/local/bin/virtualenvwrapper.sh # do ~/.bashrc
+# do ~/.bashrc
+    source /usr/local/bin/virtualenvwrapper.sh
     mkvirtualenv wsb-simple-flask-app
     pip install -r requirements.txt
     pip install -r test_requirements.txt
@@ -37,7 +44,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
   ::
 
-    source /usr/bin/virtualenvwrapper.sh # nie trzeba, jeśli już w .bashrc
+    source /usr/local/bin/virtualenvwrapper.sh # nie trzeba, jeśli już w .bashrc
     workon wsb-simple-flask-app
 
 
@@ -55,14 +62,14 @@ Pomocnicze
 
   ::
 
-    yum install -y python-pip
+    sudo su
     pip install -U pip
     pip install virtualenv
     pip install virtualenvwrapper
 
 - Instalacja docker-a:
 
-  ::
+  :: 
 
     yum remove docker \
         docker-common \
