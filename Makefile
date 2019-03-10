@@ -9,3 +9,7 @@ lint:
 
 test:
 	PYTHONPATH=. py.test --verbose -s
+
+nowe:
+	-test_cov-gneracja coverage
+	-test_xunit-generacja xunit i coverage 
